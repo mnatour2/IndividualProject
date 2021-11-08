@@ -39,7 +39,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="10dp"
         android:onClick="nextOnClick"
-        android:text="Next"
+        android:text="@string/next"
         android:visibility="gone"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
