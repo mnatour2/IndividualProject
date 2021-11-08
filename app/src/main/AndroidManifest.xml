@@ -16,7 +16,6 @@
     tools:targetApi="m">
     <activity android:name=".Activities.Confirmation" />
     <activity android:name=".Activities.Checkout" />
-    <activity android:name=".Activities.Information" />
     <activity android:name=".Activities.ItemAdded" />
     <activity android:name=".Activities.ItemDetails" />
     <activity android:name=".Activities.Cart" />

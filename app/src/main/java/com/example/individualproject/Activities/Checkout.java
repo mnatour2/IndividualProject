@@ -3,11 +3,9 @@ package com.example.individualproject.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,31 +28,28 @@ public class Checkout extends AppCompatActivity {
     Gson gson;
     Item item;
     Double totalPriceBeforeTax,totalPriceAfterTax,subtotal,tax;
-    TextView totalBtaxV,taxV,totalAtaxV;
+    TextView totalBeforeTaxV,taxV,totalAfterTaxV;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.checkout_layout);
         BottomNavigationView BottomNavigationView =findViewById(R.id.bottomNavigationView);
         BottomNavigationView.setSelectedItemId(R.id.cart);
-        BottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.homepage:
-                        startActivity(new Intent(getApplicationContext(), com.example.individualproject.Activities.Home.class));
-                        overridePendingTransition(0,0);
-                        return true;
-                    case R.id.cart:
-                        startActivity(new Intent(getApplicationContext(), com.example.individualproject.Activities.Cart.class));
-                        overridePendingTransition(0,0);
-                        return true;
-                }
-                return false;
+        BottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()){
+                case R.id.homepage:
+                    startActivity(new Intent(getApplicationContext(), Home.class));
+                    overridePendingTransition(0,0);
+                    return true;
+                case R.id.cart:
+                    startActivity(new Intent(getApplicationContext(), Cart.class));
+                    overridePendingTransition(0,0);
+                    return true;
             }
+            return false;
         });
-        totalBtaxV=findViewById(R.id.totalBtaxV);
-        totalAtaxV=findViewById(R.id.totalAtaxV);
+        totalBeforeTaxV=findViewById(R.id.totalBtaxV);
+        totalAfterTaxV=findViewById(R.id.totalAtaxV);
         taxV=findViewById(R.id.taxV);
 
         subtotal=0.0;
@@ -65,18 +60,18 @@ public class Checkout extends AppCompatActivity {
         itemsString=intent.getStringExtra("itemsString");
         String[] itemsList=itemsString.split("#");
         Log.d("TAG", "onCreateasasdas: ");
-        for (int i=0;i<itemsList.length;i++){
-            item = gson.fromJson(itemsList[i], Item.class);
-            subtotal+=item.getTotalBeforeTax();
-            Log.d("TAG", "onCreate: "+subtotal);
+        for (String s : itemsList) {
+            item = gson.fromJson(s, Item.class);
+            subtotal += item.getTotalBeforeTax();
+            Log.d("TAG", "onCreate: " + subtotal);
             cartItemsList.add(item);
         }
         totalPriceBeforeTax=subtotal;
-        totalBtaxV.setText(String.valueOf(totalPriceBeforeTax));
+        totalBeforeTaxV.setText(String.valueOf(totalPriceBeforeTax));
         tax=totalPriceBeforeTax*0.14;
         taxV.setText(String.valueOf(tax));
         totalPriceAfterTax=totalPriceBeforeTax+tax;
-        totalAtaxV.setText(String.valueOf(totalPriceAfterTax));
+        totalAfterTaxV.setText(String.valueOf(totalPriceAfterTax));
 
         if(cartItemsList.size()!=0){
             Log.d("TAG", "inside if: "+cartItemsList.size());

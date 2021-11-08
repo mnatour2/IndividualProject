@@ -56,62 +56,6 @@
             app:layout_constraintTop_toBottomOf="@+id/item_image_preview" />
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/stars"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/item_title_preview"
-            app:layout_constraintTop_toBottomOf="@+id/item_title_preview">
-
-            <ImageView
-                android:id="@+id/star1_preview"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/star2_preview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/star1_preview"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/star3_preview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/star2_preview"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/star4_preview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/star3_preview"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/star5_preview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/star4_preview"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
 
         <TextView
             android:id="@+id/price_string2"
@@ -121,8 +65,8 @@
             android:text="Price:"
             android:textColor="#000000"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@+id/stars"
-            app:layout_constraintTop_toBottomOf="@+id/stars" />
+            app:layout_constraintStart_toStartOf="@+id/item_title_preview"
+            app:layout_constraintTop_toBottomOf="@+id/item_title_preview" />
 
         <TextView
             android:id="@+id/item_price_preview"

@@ -3,9 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.27239583333333334" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/drawable/ic_baseline_account_circle_50.xml" value="0.27239583333333334" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.27239583333333334" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.27239583333333334" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.27239583333333334" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.27239583333333334" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.27239583333333334" />
         <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/drawable/selector.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/bottom_nav_layout.xml" value="0.15443840579710144" />
         <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/cart_item_card_layout.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/cart_layout.xml" value="0.15443840579710144" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/checkout_card_layout.xml" value="0.15443840579710144" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/checkout_layout.xml" value="0.15443840579710144" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/confirmation_layout.xml" value="0.15443840579710144" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/home_layout.xml" value="0.15443840579710144" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/item_added_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/item_card_layout.xml" value="0.1" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/item_details_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/personal_information_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/layout/top_toolbar_layout.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Natour/AndroidStudioProjects/IndividualProject/app/src/main/res/menu/bottom_nav_icons.xml" value="0.20520833333333333" />
       </map>
     </option>

@@ -48,12 +48,11 @@ public class Home extends AppCompatActivity {
         int[] itemImagesIDs=new int[Item.items.length];
         for (int i=0;i<itemNames.length;i++){
             itemNames[i]=Item.items[i].getName();
-            itemRatings[i]=Item.items[i].getRating();
             itemPrices[i]=Item.items[i].getPrice();
             itemImagesIDs[i]=Item.items[i].getImageID();
         }
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter=new HomeItemsAdapter(getApplicationContext(),itemNames,itemRatings,itemPrices,itemImagesIDs);
+        adapter=new HomeItemsAdapter(getApplicationContext(),itemNames,itemPrices,itemImagesIDs);
         recyclerView.setAdapter(adapter);
     }
 

@@ -5,37 +5,24 @@ import com.example.individualproject.R;
 public class Item  {
     private String name;
     private Double price;
-    private String rating;
     private int quantity;
     private int imageID;
     public static final Item[] items={
-            new Item("Franklin Sports Grip-Rite 100 Rubber Junior Football",4.88,"5", R.drawable.football),
-            new Item("FC Barcelona Home Jersey 2020/21 (Nike)",64.96,"4", R.drawable.barcelona_kit),
-            new Item("F.C. Barcelona 2020/21 Stadium Goalkeeper Shorts",28.47,"3", R.drawable.barcelona_shorts),
-            new Item("METIS NEOPRENE HEX DUMBBELLS X2 [1LB-22LBS] - PAIR",29.99,"2", R.drawable.dumbells),
-            new Item("Adidas Running Shoes (Black)",61.9,"1", R.drawable.shoes),
+            new Item("Franklin Sports Grip-Rite 100 Rubber Junior Football",4.88, R.drawable.football),
+            new Item("FC Barcelona Home Jersey 2020/21 (Nike)",64.96, R.drawable.barcelona_kit),
+            new Item("F.C. Barcelona 2020/21 Stadium Goalkeeper Shorts",28.47, R.drawable.barcelona_shorts),
+            new Item("METIS NEOPRENE HEX DUMBBELLS X2 [1LB-22LBS] - PAIR",29.99, R.drawable.dumbells),
+            new Item("Adidas Running Shoes (Black)",61.9, R.drawable.shoes),
     };
-    public Item() {
+    public Item(String name, Double price, int imageID) {
+        this.name = name;
+        this.price = price;
+        this.imageID = imageID;
     }
 
     public Item(String name, Double price, int quantity, int imageID) {
         this.name = name;
         this.price = price;
-        this.quantity = quantity;
-        this.imageID = imageID;
-    }
-
-    public Item(String name, Double price, String rating, int imageID) {
-        this.name = name;
-        this.price = price;
-        this.rating = rating;
-        this.imageID = imageID;
-    }
-
-    public Item(String name, Double price, String rating, int quantity, int imageID) {
-        this.name = name;
-        this.price = price;
-        this.rating = rating;
         this.quantity = quantity;
         this.imageID = imageID;
     }
@@ -54,14 +41,6 @@ public class Item  {
 
     public void setPrice(Double price) {
         this.price = price;
-    }
-
-    public String getRating() {
-        return rating;
-    }
-
-    public void setRating(String rating) {
-        this.rating = rating;
     }
 
     public int getQuantity() {
@@ -91,7 +70,6 @@ public class Item  {
         return "Item{" +
                 ", name='" + name + '\'' +
                 ", price=" + price +
-                ", rating='" + rating + '\'' +
                 ", quantity=" + quantity +
                 ", imageID=" + imageID +
                 '}';

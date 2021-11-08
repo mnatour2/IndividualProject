@@ -23,7 +23,7 @@ public class CartItemsAdapter extends RecyclerView.Adapter<CartItemsAdapter.View
 
     LayoutInflater inflater;
     Context context;
-    private List<Item> itemsList;
+    private final List<Item> itemsList;
 
 
     public CartItemsAdapter( Context context, List<Item> itemsList) {
@@ -58,7 +58,7 @@ public class CartItemsAdapter extends RecyclerView.Adapter<CartItemsAdapter.View
         return itemsList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder{
         TextView item_title,item_price,itemQty,total_cart_value;
         ImageView item_image,nis_symbol3,nis_symbol4;
         CardView cardView;
